@@ -7,6 +7,7 @@ import { ActiveChatComponent } from './active-chat/active-chat.component';
 import { ActiveUserComponent } from './active-user/active-user.component';
 import { PostToActiveChatComponent } from './post-to-active-chat/post-to-active-chat.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AppService } from "./AppService";
 
 
 @NgModule({
@@ -19,9 +20,9 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule 
   ],
-  providers: [ChatService],
+  providers: [ChatService, AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
