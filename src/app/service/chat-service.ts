@@ -11,12 +11,13 @@ import 'rxjs/add/operator/map';
 export class ChatService {
   private uri = 'http://localhost:8080/chat/messages/';
 
-  constructor(private http: Http) {
-
-  }
+  constructor(private http: Http) { }
 
   getMessages(): Observable<any> {
     return this.http.get(this.uri).map((response: Response) => response.json());
+  }
+  getMessageById(id:number): Observable<any> {
+    return this.http.get(this.uri + "/id").map((response: Response) => response.json());
   }
 
   addMessage(input: string) {

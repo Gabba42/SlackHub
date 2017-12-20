@@ -16,6 +16,6 @@ export class PostToActiveChatComponent {
 
   onClick(input: any): void {
     this._chatService.addMessage(input.value);
-    input.value = "";
+    input.value = ""; 
   }
 }
